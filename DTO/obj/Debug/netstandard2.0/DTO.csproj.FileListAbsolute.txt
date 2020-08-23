@@ -1,0 +1,9 @@
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\DTO\bin\Debug\netstandard2.0\DTO.deps.json
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\DTO\bin\Debug\netstandard2.0\DTO.dll
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\DTO\obj\Debug\netstandard2.0\DTO.AssemblyInfoInputs.cache
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\DTO\obj\Debug\netstandard2.0\DTO.AssemblyInfo.cs
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\DTO\bin\Debug\netstandard2.0\DTO.pdb
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\DTO\obj\Debug\netstandard2.0\DTO.csprojAssemblyReference.cache
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\DTO\obj\Debug\netstandard2.0\DTO.csproj.CoreCompileInputs.cache
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\DTO\obj\Debug\netstandard2.0\DTO.dll
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\DTO\obj\Debug\netstandard2.0\DTO.pdb

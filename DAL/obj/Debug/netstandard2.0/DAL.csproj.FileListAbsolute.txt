@@ -1,0 +1,12 @@
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\DAL\bin\Debug\netstandard2.0\DAL.dll
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\DAL\bin\Debug\netstandard2.0\DAL.pdb
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\DAL\bin\Debug\netstandard2.0\DTO.dll
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\DAL\bin\Debug\netstandard2.0\DTO.pdb
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\DAL\obj\Debug\netstandard2.0\DAL.dll
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\DAL\obj\Debug\netstandard2.0\DAL.pdb
