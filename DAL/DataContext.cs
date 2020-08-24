@@ -18,6 +18,7 @@ namespace DTO
             //var configuration = builder.Build();
             //optionsBuilder.UseSqlServer(configuration["ConnectionStrings:DefaultConnection"]);
             optionsBuilder.UseSqlServer(@"Server=HOANGUYEN;Database=QLXeDuLich;UID=sa;Password=Ta0lacuamay1;");
+            //optionsBuilder.UseSqlServer(@"Server=HOANGUYEN;Database=QLXeDuLich;trusted_user=true");
         }
 
         //khai bao su dung class o day

@@ -99,3 +99,5 @@ G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\GUI\bin\Debug\BUS.p
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\GUI\bin\Debug\DAL.pdb
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\GUI\bin\Debug\DTO.pdb
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\GUI\obj\Debug\GUI.Employee.resources
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\GUI\obj\Debug\GUI.Forms.MainForm.resources
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\GUI\obj\Debug\GUI.Forms.ManageCarForm.resources
