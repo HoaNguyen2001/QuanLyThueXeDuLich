@@ -28,14 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnLeft = new System.Windows.Forms.Panel();
-            this.pnTitle = new System.Windows.Forms.Panel();
-            this.pnLogo = new System.Windows.Forms.Panel();
-            this.lbTitle = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnMain = new System.Windows.Forms.Panel();
+            this.btn_InforCar = new System.Windows.Forms.Button();
+            this.btn_Customers = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnEmployee = new System.Windows.Forms.Button();
+            this.pnTitle = new System.Windows.Forms.Panel();
+            this.lbTitle = new System.Windows.Forms.Label();
+            this.pnLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnMain = new System.Windows.Forms.Panel();
             this.pnLeft.SuspendLayout();
             this.pnTitle.SuspendLayout();
             this.pnLogo.SuspendLayout();
@@ -44,100 +47,92 @@
             // 
             // pnLeft
             // 
-            this.pnLeft.AutoScroll = true;
+            resources.ApplyResources(this.pnLeft, "pnLeft");
             this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.pnLeft.Controls.Add(this.btn_InforCar);
+            this.pnLeft.Controls.Add(this.btn_Customers);
             this.pnLeft.Controls.Add(this.button1);
             this.pnLeft.Controls.Add(this.btnEmployee);
-            this.pnLeft.Location = new System.Drawing.Point(0, 112);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(218, 629);
-            this.pnLeft.TabIndex = 0;
             // 
-            // pnTitle
+            // btn_InforCar
             // 
-            this.pnTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.pnTitle.Controls.Add(this.lbTitle);
-            this.pnTitle.Location = new System.Drawing.Point(216, 0);
-            this.pnTitle.Name = "pnTitle";
-            this.pnTitle.Size = new System.Drawing.Size(1234, 47);
-            this.pnTitle.TabIndex = 1;
+            resources.ApplyResources(this.btn_InforCar, "btn_InforCar");
+            this.btn_InforCar.BackColor = System.Drawing.Color.MistyRose;
+            this.btn_InforCar.Image = global::GUI.Properties.Resources.vw_beetle_icon;
+            this.btn_InforCar.Name = "btn_InforCar";
+            this.btn_InforCar.UseVisualStyleBackColor = false;
+            this.btn_InforCar.Click += new System.EventHandler(this.btn_InforCar_Click);
             // 
-            // pnLogo
+            // btn_Customers
             // 
-            this.pnLogo.Controls.Add(this.pictureBox1);
-            this.pnLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnLogo.Name = "pnLogo";
-            this.pnLogo.Size = new System.Drawing.Size(218, 114);
-            this.pnLogo.TabIndex = 0;
-            // 
-            // lbTitle
-            // 
-            this.lbTitle.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.Location = new System.Drawing.Point(0, 0);
-            this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(1234, 47);
-            this.lbTitle.TabIndex = 0;
-            this.lbTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GUI.Properties.Resources._818372dc919f7b2e5246c443579bcd11;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(218, 114);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pnMain
-            // 
-            this.pnMain.BackgroundImage = global::GUI.Properties.Resources.hinh_nen_sieu_xe_full_hd_cho_laptop_3;
-            this.pnMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnMain.Location = new System.Drawing.Point(216, 44);
-            this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(1234, 697);
-            this.pnMain.TabIndex = 2;
+            resources.ApplyResources(this.btn_Customers, "btn_Customers");
+            this.btn_Customers.BackColor = System.Drawing.Color.MistyRose;
+            this.btn_Customers.Image = global::GUI.Properties.Resources.User_Group_icon;
+            this.btn_Customers.Name = "btn_Customers";
+            this.btn_Customers.UseVisualStyleBackColor = false;
+            this.btn_Customers.Click += new System.EventHandler(this.btn_Customers_Click);
             // 
             // button1
             // 
+            resources.ApplyResources(this.button1, "button1");
             this.button1.BackColor = System.Drawing.Color.MistyRose;
-            this.button1.Image = global::GUI.Properties.Resources.icons8_employee_32__2_;
-            this.button1.Location = new System.Drawing.Point(0, 53);
+            this.button1.Image = global::GUI.Properties.Resources.Distributor_report_icon;
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(218, 47);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Quản lý nhân viên";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnEmployee
             // 
+            resources.ApplyResources(this.btnEmployee, "btnEmployee");
             this.btnEmployee.BackColor = System.Drawing.Color.MistyRose;
-            this.btnEmployee.Image = global::GUI.Properties.Resources.icons8_employee_32__2_;
-            this.btnEmployee.Location = new System.Drawing.Point(0, 0);
+            this.btnEmployee.Image = global::GUI.Properties.Resources.Preppy_icon;
             this.btnEmployee.Name = "btnEmployee";
-            this.btnEmployee.Size = new System.Drawing.Size(218, 47);
-            this.btnEmployee.TabIndex = 0;
-            this.btnEmployee.Text = "Quản lý nhân viên";
-            this.btnEmployee.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEmployee.UseVisualStyleBackColor = false;
             this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
+            // pnTitle
+            // 
+            resources.ApplyResources(this.pnTitle, "pnTitle");
+            this.pnTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.pnTitle.Controls.Add(this.lbTitle);
+            this.pnTitle.Name = "pnTitle";
+            // 
+            // lbTitle
+            // 
+            resources.ApplyResources(this.lbTitle, "lbTitle");
+            this.lbTitle.Name = "lbTitle";
+            // 
+            // pnLogo
+            // 
+            resources.ApplyResources(this.pnLogo, "pnLogo");
+            this.pnLogo.Controls.Add(this.pictureBox1);
+            this.pnLogo.Name = "pnLogo";
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Image = global::GUI.Properties.Resources._818372dc919f7b2e5246c443579bcd11;
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pnMain
+            // 
+            resources.ApplyResources(this.pnMain, "pnMain");
+            this.pnMain.BackgroundImage = global::GUI.Properties.Resources.hinh_nen_sieu_xe_full_hd_cho_laptop_3;
+            this.pnMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnMain.Name = "pnMain";
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1450, 741);
             this.Controls.Add(this.pnLogo);
             this.Controls.Add(this.pnMain);
             this.Controls.Add(this.pnTitle);
             this.Controls.Add(this.pnLeft);
-            this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "MainForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Trang chủ - Quản lý hoạt động cho thuê xe du lịch";
             this.pnLeft.ResumeLayout(false);
             this.pnTitle.ResumeLayout(false);
             this.pnLogo.ResumeLayout(false);
@@ -156,5 +151,7 @@
         private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.Button btnEmployee;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Customers;
+        private System.Windows.Forms.Button btn_InforCar;
     }
 }

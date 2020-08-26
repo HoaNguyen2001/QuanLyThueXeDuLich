@@ -111,12 +111,15 @@ namespace GUI.UserControls
             try
             {
                 var Emp = new EmployeeEntities();
-                Emp.ID = int.Parse(txtID.Text);
+                Emp.ID = int.Parse(txtID.Text.Substring(2));
                 Emp.Name = txtName.Text;
 
                 var result= MessageBox.Show($"Bạn muốn xoá nhân viên {Emp.Name} không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
+                {
                     EmpPro.Delete(Emp);
+                    LoadData();
+                }   
             }
             catch (Exception ex)
             {

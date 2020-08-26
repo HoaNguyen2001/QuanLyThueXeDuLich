@@ -28,5 +28,42 @@ namespace GUI.Forms
             //EmpUC.Dock = DockStyle.Fill;
             EmpUC.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            lbTitle.Text = "Báo cáo";
+
+            pnMain.Controls.Clear();
+            ReportUC Report = new ReportUC();
+            pnMain.Controls.Add(Report);
+            //EmpUC.Dock = DockStyle.Fill;
+            Report.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            lbTitle.Text = "Quản lý hoạt động cho thuê xe";
+            pnMain.Controls.Clear();
+        }
+
+        private void btn_Customers_Click(object sender, EventArgs e)
+        {
+            lbTitle.Text = "Quản lý khách hàng";
+
+            pnMain.Controls.Clear();
+            CustomersUC CusUC = new CustomersUC();
+            pnMain.Controls.Add(CusUC);
+            CusUC.Show();
+        }
+
+        private void btn_InforCar_Click(object sender, EventArgs e)
+        {
+            lbTitle.Text = "Quản lý xe";
+
+            pnMain.Controls.Clear();
+            InforCarUC InfUC = new InforCarUC();
+            pnMain.Controls.Add(InfUC);
+            InfUC.Show();
+        }
     }
 }

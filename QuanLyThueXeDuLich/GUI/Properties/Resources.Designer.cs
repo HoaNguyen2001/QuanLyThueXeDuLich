@@ -73,6 +73,66 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Actions_document_edit_icon {
+            get {
+                object obj = ResourceManager.GetObject("Actions-document-edit-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Actions_edit_delete_icon {
+            get {
+                object obj = ResourceManager.GetObject("Actions-edit-delete-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Actions_list_add_user_icon {
+            get {
+                object obj = ResourceManager.GetObject("Actions-list-add-user-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap addressbook_icon {
+            get {
+                object obj = ResourceManager.GetObject("addressbook-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Apps_preferences_web_browser_identification_icon {
+            get {
+                object obj = ResourceManager.GetObject("Apps-preferences-web-browser-identification-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Distributor_report_icon {
+            get {
+                object obj = ResourceManager.GetObject("Distributor-report-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hinh_nen_sieu_xe_full_hd_cho_laptop_3 {
             get {
                 object obj = ResourceManager.GetObject("hinh-nen-sieu-xe-full-hd-cho-laptop-3", resourceCulture);
@@ -96,6 +156,86 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap icons8_employee_32__2_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-employee-32 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lamborghini_centenario_2017_1600_01_1514410005837 {
+            get {
+                object obj = ResourceManager.GetObject("lamborghini-centenario-2017-1600-01-1514410005837", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Microsoft_Excel_2013_icon {
+            get {
+                object obj = ResourceManager.GetObject("Microsoft-Excel-2013-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap phone_icon {
+            get {
+                object obj = ResourceManager.GetObject("phone-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Preppy_icon {
+            get {
+                object obj = ResourceManager.GetObject("Preppy-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap red_search_icon {
+            get {
+                object obj = ResourceManager.GetObject("red-search-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_Group_icon {
+            get {
+                object obj = ResourceManager.GetObject("User-Group-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vw_beetle_icon {
+            get {
+                object obj = ResourceManager.GetObject("vw-beetle-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Windows_Restart_icon {
+            get {
+                object obj = ResourceManager.GetObject("Windows-Restart-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

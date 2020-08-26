@@ -2,6 +2,8 @@ G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\bin\Debug\DAL.dll
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\bin\Debug\DAL.pdb
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\bin\Debug\DTO.dll
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\bin\Debug\EntityFramework.dll
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\bin\Debug\EntityFramework.SqlServer.dll
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\bin\Debug\Microsoft.Bcl.HashCode.dll
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\bin\Debug\Microsoft.Data.SqlClient.dll
@@ -39,6 +41,8 @@ G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\bin\Debug\System.Threading.Tasks.Extensions.dll
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\bin\Debug\DTO.pdb
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\bin\Debug\DTO.dll.config
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\bin\Debug\EntityFramework.xml
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\bin\Debug\EntityFramework.SqlServer.xml
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\bin\Debug\Microsoft.Bcl.HashCode.xml
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\bin\Debug\Microsoft.Data.SqlClient.pdb
@@ -89,7 +93,3 @@ G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\obj\Debug\DAL.csproj.CopyComplete
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\obj\Debug\DAL.dll
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\obj\Debug\DAL.pdb
-G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\bin\Debug\EntityFramework.dll
-G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\bin\Debug\EntityFramework.SqlServer.dll
-G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\bin\Debug\EntityFramework.xml
-G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\DAL\bin\Debug\EntityFramework.SqlServer.xml
