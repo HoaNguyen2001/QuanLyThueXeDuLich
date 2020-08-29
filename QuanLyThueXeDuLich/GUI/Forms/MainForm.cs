@@ -1,4 +1,5 @@
-﻿using GUI.UserControls;
+﻿using DTO;
+using GUI.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -64,6 +65,30 @@ namespace GUI.Forms
             InforCarUC InfUC = new InforCarUC();
             pnMain.Controls.Add(InfUC);
             InfUC.Show();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            var reult = MessageBox.Show("Bạn muốn đăng xuất?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (reult == DialogResult.Yes)
+            {
+                LoginInfo.Name = "";
+                LoginInfo.Role = 99;
+                new LoginForm().Visible = true;
+                this.Visible = false;
+            }
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            var reult = MessageBox.Show("Bạn muốn đăng xuất?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (reult == DialogResult.Yes)
+            {
+                LoginInfo.Name = "";
+                LoginInfo.Role = 99;
+                new LoginForm().Visible = true;
+                this.Visible = false;
+            }
         }
     }
 }

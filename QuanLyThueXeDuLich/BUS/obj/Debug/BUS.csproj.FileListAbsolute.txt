@@ -30,7 +30,6 @@ G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\BUS\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\BUS\bin\Debug\Microsoft.IdentityModel.Tokens.dll
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\BUS\bin\Debug\Newtonsoft.Json.dll
-G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\BUS\bin\Debug\nunit.framework.dll
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\BUS\bin\Debug\System.Buffers.dll
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\BUS\bin\Debug\System.Collections.Immutable.dll
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\BUS\bin\Debug\System.ComponentModel.Annotations.dll
@@ -73,8 +72,6 @@ G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\BUS\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\BUS\bin\Debug\Microsoft.IdentityModel.Tokens.xml
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\BUS\bin\Debug\Newtonsoft.Json.xml
-G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\BUS\bin\Debug\nunit.framework.pdb
-G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\BUS\bin\Debug\nunit.framework.xml
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\BUS\bin\Debug\System.Buffers.xml
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\BUS\bin\Debug\System.Collections.Immutable.xml
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\BUS\bin\Debug\System.Data.SqlClient.xml

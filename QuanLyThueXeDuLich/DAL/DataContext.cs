@@ -25,5 +25,6 @@ namespace DAL
 
         //khai bao su dung class o day
         public DbSet<EmployeeEntities> Employees { get; set; }
+        public DbSet<InforCarEntities> inforCars { get; set; }
     }
 }

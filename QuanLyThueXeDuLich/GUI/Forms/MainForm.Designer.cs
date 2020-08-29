@@ -30,15 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnLeft = new System.Windows.Forms.Panel();
-            this.btn_InforCar = new System.Windows.Forms.Button();
-            this.btn_Customers = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnEmployee = new System.Windows.Forms.Button();
             this.pnTitle = new System.Windows.Forms.Panel();
             this.lbTitle = new System.Windows.Forms.Label();
             this.pnLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnMain = new System.Windows.Forms.Panel();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.btn_InforCar = new System.Windows.Forms.Button();
+            this.btn_Customers = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnEmployee = new System.Windows.Forms.Button();
             this.pnLeft.SuspendLayout();
             this.pnTitle.SuspendLayout();
             this.pnLogo.SuspendLayout();
@@ -49,53 +50,18 @@
             // 
             resources.ApplyResources(this.pnLeft, "pnLeft");
             this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.pnLeft.Controls.Add(this.btnLogOut);
             this.pnLeft.Controls.Add(this.btn_InforCar);
             this.pnLeft.Controls.Add(this.btn_Customers);
             this.pnLeft.Controls.Add(this.button1);
             this.pnLeft.Controls.Add(this.btnEmployee);
             this.pnLeft.Name = "pnLeft";
             // 
-            // btn_InforCar
-            // 
-            resources.ApplyResources(this.btn_InforCar, "btn_InforCar");
-            this.btn_InforCar.BackColor = System.Drawing.Color.MistyRose;
-            this.btn_InforCar.Image = global::GUI.Properties.Resources.vw_beetle_icon;
-            this.btn_InforCar.Name = "btn_InforCar";
-            this.btn_InforCar.UseVisualStyleBackColor = false;
-            this.btn_InforCar.Click += new System.EventHandler(this.btn_InforCar_Click);
-            // 
-            // btn_Customers
-            // 
-            resources.ApplyResources(this.btn_Customers, "btn_Customers");
-            this.btn_Customers.BackColor = System.Drawing.Color.MistyRose;
-            this.btn_Customers.Image = global::GUI.Properties.Resources.User_Group_icon;
-            this.btn_Customers.Name = "btn_Customers";
-            this.btn_Customers.UseVisualStyleBackColor = false;
-            this.btn_Customers.Click += new System.EventHandler(this.btn_Customers_Click);
-            // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.BackColor = System.Drawing.Color.MistyRose;
-            this.button1.Image = global::GUI.Properties.Resources.Distributor_report_icon;
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnEmployee
-            // 
-            resources.ApplyResources(this.btnEmployee, "btnEmployee");
-            this.btnEmployee.BackColor = System.Drawing.Color.MistyRose;
-            this.btnEmployee.Image = global::GUI.Properties.Resources.Preppy_icon;
-            this.btnEmployee.Name = "btnEmployee";
-            this.btnEmployee.UseVisualStyleBackColor = false;
-            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
-            // 
             // pnTitle
             // 
-            resources.ApplyResources(this.pnTitle, "pnTitle");
             this.pnTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.pnTitle.Controls.Add(this.lbTitle);
+            resources.ApplyResources(this.pnTitle, "pnTitle");
             this.pnTitle.Name = "pnTitle";
             // 
             // lbTitle
@@ -105,24 +71,69 @@
             // 
             // pnLogo
             // 
-            resources.ApplyResources(this.pnLogo, "pnLogo");
             this.pnLogo.Controls.Add(this.pictureBox1);
+            resources.ApplyResources(this.pnLogo, "pnLogo");
             this.pnLogo.Name = "pnLogo";
             // 
             // pictureBox1
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Image = global::GUI.Properties.Resources._818372dc919f7b2e5246c443579bcd11;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pnMain
             // 
-            resources.ApplyResources(this.pnMain, "pnMain");
             this.pnMain.BackgroundImage = global::GUI.Properties.Resources.hinh_nen_sieu_xe_full_hd_cho_laptop_3;
+            resources.ApplyResources(this.pnMain, "pnMain");
             this.pnMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnMain.Name = "pnMain";
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.MistyRose;
+            this.btnLogOut.Image = global::GUI.Properties.Resources.logout_icon;
+            resources.ApplyResources(this.btnLogOut, "btnLogOut");
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // btn_InforCar
+            // 
+            this.btn_InforCar.BackColor = System.Drawing.Color.MistyRose;
+            this.btn_InforCar.Image = global::GUI.Properties.Resources.vw_beetle_icon;
+            resources.ApplyResources(this.btn_InforCar, "btn_InforCar");
+            this.btn_InforCar.Name = "btn_InforCar";
+            this.btn_InforCar.UseVisualStyleBackColor = false;
+            this.btn_InforCar.Click += new System.EventHandler(this.btn_InforCar_Click);
+            // 
+            // btn_Customers
+            // 
+            this.btn_Customers.BackColor = System.Drawing.Color.MistyRose;
+            this.btn_Customers.Image = global::GUI.Properties.Resources.User_Group_icon;
+            resources.ApplyResources(this.btn_Customers, "btn_Customers");
+            this.btn_Customers.Name = "btn_Customers";
+            this.btn_Customers.UseVisualStyleBackColor = false;
+            this.btn_Customers.Click += new System.EventHandler(this.btn_Customers_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MistyRose;
+            this.button1.Image = global::GUI.Properties.Resources.Distributor_report_icon;
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnEmployee
+            // 
+            this.btnEmployee.BackColor = System.Drawing.Color.MistyRose;
+            this.btnEmployee.Image = global::GUI.Properties.Resources.Preppy_icon;
+            resources.ApplyResources(this.btnEmployee, "btnEmployee");
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.UseVisualStyleBackColor = false;
+            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // MainForm
             // 
@@ -133,6 +144,7 @@
             this.Controls.Add(this.pnTitle);
             this.Controls.Add(this.pnLeft);
             this.Name = "MainForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.pnLeft.ResumeLayout(false);
             this.pnTitle.ResumeLayout(false);
             this.pnLogo.ResumeLayout(false);
@@ -153,5 +165,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_Customers;
         private System.Windows.Forms.Button btn_InforCar;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }

@@ -28,7 +28,7 @@ namespace GUI.UserControls
             SqlCommand cmd = new SqlCommand("Select * from InforCar", conn);
             SqlDataReader dr = cmd.ExecuteReader();
             int index = 0;
-            dgvXe.ColumnCount = 9;
+            dgvXe.ColumnCount = 11;
             dgvXe.Rows.Clear();
             while (dr.Read())
             {
@@ -49,7 +49,8 @@ namespace GUI.UserControls
                 dgvXe.Rows[index].Cells[6].Value = dr["NumCar"];
                 dgvXe.Rows[index].Cells[7].Value = dr["PricePerDay"];
                 dgvXe.Rows[index].Cells[8].Value = dr["ManufactureYear"];
-
+                dgvXe.Rows[index].Cells[9].Value = dr["NumberOfCar"];
+                dgvXe.Rows[index].Cells[10].Value = dr["DateAddCar"];
                 index++;
             }
         }
@@ -68,6 +69,8 @@ namespace GUI.UserControls
             txtBienSoXe.Text = "";
             txtGiaMoiNgay.Text = "";
             dtpNamSanXuat.Value = DateTime.Now;
+            dtpNgayNhap.Value = DateTime.Now;
+            txtSoLuong.Text = "";
         }
         int row;
         private void dgvXe_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -91,6 +94,8 @@ namespace GUI.UserControls
                 txtBienSoXe.Text = dgvXe.Rows[row].Cells[6].Value.ToString();
                 txtGiaMoiNgay.Text = dgvXe.Rows[row].Cells[7].Value.ToString();
                 dtpNamSanXuat.Text = dgvXe.Rows[row].Cells[8].Value.ToString();
+                txtSoLuong.Text= dgvXe.Rows[row].Cells[9].Value.ToString();
+                dtpNgayNhap.Text = dgvXe.Rows[row].Cells[10].Value.ToString();
             }
         }
 
@@ -101,7 +106,7 @@ namespace GUI.UserControls
                 conn = new SqlConnection(connstring);
                 if (conn.State == ConnectionState.Closed)
                     conn.Open();
-                string sql = "Insert into InforCar values (@Name, @ManufacturerCar, @Color, @RegistrationDate, @Status, @NumCar, @PricePerDay, @ManufactureYear)";
+                string sql = "Insert into InforCar values (@Name, @ManufacturerCar, @Color, @RegistrationDate, @Status, @NumCar, @PricePerDay, @ManufactureYear, @NumberOfCar, @DateAddCar)";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 //cmd.Parameters.AddWithValue("@ID", txtMaXe.Text);
                 cmd.Parameters.AddWithValue("@Name", txtTenXe.Text);
@@ -120,7 +125,8 @@ namespace GUI.UserControls
                 cmd.Parameters.AddWithValue("@NumCar", Int32.Parse(txtBienSoXe.Text));
                 cmd.Parameters.AddWithValue("@PricePerDay", Int32.Parse(txtGiaMoiNgay.Text));
                 cmd.Parameters.AddWithValue("@ManufactureYear", dtpNamSanXuat.Value);
-
+                cmd.Parameters.AddWithValue("@NumberOfCar", Int32.Parse(txtSoLuong.Text));
+                cmd.Parameters.AddWithValue("@DateAddCar",dtpNgayNhap.Value);
                 cmd.ExecuteNonQuery();
 
                 if (conn.State == ConnectionState.Open)
@@ -145,7 +151,7 @@ namespace GUI.UserControls
                     conn = new SqlConnection(connstring);
                     if (conn.State == ConnectionState.Closed)
                         conn.Open();
-                    string sql = "Update InforCar set Name=@Name, ManufacturerCar=@ManufacturerCar, Color=@Color, RegistrationDate=@RegistrationDate, Status=@Status, NumCar=@NumCar, PricePerDay=@PricePerDay, ManufactureYear=@ManufactureYear Where ID='" + txtMaXe.Text + "'";
+                    string sql = "Update InforCar set Name=@Name, ManufacturerCar=@ManufacturerCar, Color=@Color, RegistrationDate=@RegistrationDate, Status=@Status, NumCar=@NumCar, PricePerDay=@PricePerDay, ManufactureYear=@ManufactureYear, NumberOfCar=@NumberOfCar, DateAddCar=@DateAddCar Where ID='" + txtMaXe.Text + "'";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     cmd.Parameters.AddWithValue("@Name", txtTenXe.Text);
                     cmd.Parameters.AddWithValue("@ManufacturerCar", txtHangXe.Text);
@@ -163,7 +169,8 @@ namespace GUI.UserControls
                     cmd.Parameters.AddWithValue("@NumCar", Int32.Parse(txtBienSoXe.Text));
                     cmd.Parameters.AddWithValue("@PricePerDay", Int32.Parse(txtGiaMoiNgay.Text));
                     cmd.Parameters.AddWithValue("@ManufactureYear", dtpNamSanXuat.Value);
-
+                    cmd.Parameters.AddWithValue("@NumberOfCar", Int32.Parse(txtSoLuong.Text));
+                    cmd.Parameters.AddWithValue("@DateAddCar", dtpNgayNhap.Value);
                     cmd.ExecuteNonQuery();
 
                     if (conn.State == ConnectionState.Open)
@@ -224,6 +231,8 @@ namespace GUI.UserControls
                     dtpNgayDangKi.Enabled = false;
                     dtpNamSanXuat.Enabled = false;
                     txtMaXe.Enabled = false;
+                    txtSoLuong.Enabled = false;
+                    dtpNgayNhap.Enabled = false;
                     break;
 
                 case 1://tìm kiếm theo hãng xe
@@ -237,6 +246,8 @@ namespace GUI.UserControls
                     dtpNgayDangKi.Enabled = false;
                     dtpNamSanXuat.Enabled = false;
                     txtMaXe.Enabled = false;
+                    txtSoLuong.Enabled = false;
+                    dtpNgayNhap.Enabled = false;
                     break;
 
                 case 2://tìm kiếm theo biển số xe
@@ -250,6 +261,8 @@ namespace GUI.UserControls
                     dtpNgayDangKi.Enabled = false;
                     dtpNamSanXuat.Enabled = false;
                     txtMaXe.Enabled = false;
+                    txtSoLuong.Enabled = false;
+                    dtpNgayNhap.Enabled = false;
                     break;
 
                 default:
@@ -263,6 +276,8 @@ namespace GUI.UserControls
                     dtpNgayDangKi.Enabled = true;
                     dtpNamSanXuat.Enabled = true;
                     txtMaXe.Enabled = true;
+                    txtSoLuong.Enabled = true;
+                    dtpNgayNhap.Enabled = true;
                     break;
             }
         }
@@ -285,7 +300,7 @@ namespace GUI.UserControls
                         cmd0.ExecuteNonQuery();
                         SqlDataReader dr0 = cmd0.ExecuteReader();
                         int i0 = 0;
-                        dgvXe.ColumnCount = 9;
+                        dgvXe.ColumnCount = 11;
                         dgvXe.Rows.Clear();
                         while (dr0.Read())
                         {
@@ -306,7 +321,8 @@ namespace GUI.UserControls
                             dgvXe.Rows[i0].Cells[6].Value = dr0["NumCar"];
                             dgvXe.Rows[i0].Cells[7].Value = dr0["PricePerDay"];
                             dgvXe.Rows[i0].Cells[8].Value = dr0["ManufactureYear"];
-
+                            dgvXe.Rows[i0].Cells[9].Value = dr0["NumberOfCar"];
+                            dgvXe.Rows[i0].Cells[10].Value = dr0["DateAddCar"];
                             i0++;
                         }
 
@@ -319,7 +335,7 @@ namespace GUI.UserControls
                         cmd1.ExecuteNonQuery();
                         SqlDataReader dr1 = cmd1.ExecuteReader();
                         int i1 = 0;
-                        dgvXe.ColumnCount = 9;
+                        dgvXe.ColumnCount = 11;
                         dgvXe.Rows.Clear();
                         while (dr1.Read())
                         {
@@ -340,7 +356,8 @@ namespace GUI.UserControls
                             dgvXe.Rows[i1].Cells[6].Value = dr1["NumCar"];
                             dgvXe.Rows[i1].Cells[7].Value = dr1["PricePerDay"];
                             dgvXe.Rows[i1].Cells[8].Value = dr1["ManufactureYear"];
-
+                            dgvXe.Rows[i1].Cells[9].Value = dr1["NumberOfCar"];
+                            dgvXe.Rows[i1].Cells[10].Value = dr1["DateAddCar"];
                             i1++;
                         }
 
@@ -354,7 +371,7 @@ namespace GUI.UserControls
                         cmd2.ExecuteNonQuery();
                         SqlDataReader dr2 = cmd2.ExecuteReader();
                         int i2 = 0;
-                        dgvXe.ColumnCount = 9;
+                        dgvXe.ColumnCount = 11;
                         dgvXe.Rows.Clear();
                         while (dr2.Read())
                         {
@@ -375,7 +392,8 @@ namespace GUI.UserControls
                             dgvXe.Rows[i2].Cells[6].Value = dr2["NumCar"];
                             dgvXe.Rows[i2].Cells[7].Value = dr2["PricePerDay"];
                             dgvXe.Rows[i2].Cells[8].Value = dr2["ManufactureYear"];
-
+                            dgvXe.Rows[i2].Cells[9].Value = dr2["NumberOfCar"];
+                            dgvXe.Rows[i2].Cells[10].Value = dr2["DateAddCar"];
                             i2++;
                         }
 
@@ -392,6 +410,8 @@ namespace GUI.UserControls
                         dtpNgayDangKi.Enabled = true;
                         dtpNamSanXuat.Enabled = true;
                         txtMaXe.Enabled = true;
+                        txtSoLuong.Enabled = true;
+                        dtpNgayNhap.Enabled = true;
                         break;
 
                 }

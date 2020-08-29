@@ -71,21 +71,20 @@ namespace GUI.UserControls
                 conn = new SqlConnection(connstring);
                 if (conn.State == ConnectionState.Closed)
                     conn.Open();
-                string sql = "Insert into Customers values (@ID,@Name, @Sex, @IDCardNumber, @Phone, @Address)";
+                string sql = "Insert into Customers values (@Name, @Sex, @IDCardNumber, @Phone, @Address)";
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@ID", int.Parse(txtMaKH.Text));
                 cmd.Parameters.AddWithValue("@Name", txtTenKH.Text);
                 cmd.Parameters.AddWithValue("@IDCardNumber", Int32.Parse(txtSoCMNDKH.Text));
                 cmd.Parameters.AddWithValue("@Phone", txtSDTKH.Text);
                 cmd.Parameters.AddWithValue("@Address", txtDiaChi.Text);
                 if (rdbNam.Checked)
                 {
-                    cmd.Parameters.AddWithValue("@Sex", 1);
+                    cmd.Parameters.AddWithValue("@Sex", true);
                 }
                 else
                 {
 
-                    cmd.Parameters.AddWithValue("@Sex", 0);
+                    cmd.Parameters.AddWithValue("@Sex", false);
                 }
                 cmd.ExecuteNonQuery();
                 if (conn.State == ConnectionState.Open)

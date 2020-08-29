@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using BUS.Process;
 using DTO.Entities;
 using NUnit.Framework;
+using BUS.Globals;
+using DTO;
 
 namespace GUI.UserControls
 {
@@ -20,6 +22,12 @@ namespace GUI.UserControls
         {
             InitializeComponent();
             LoadData();
+
+            if (LoginInfo.Role != 0)
+            {
+                btnAdd.Enabled = false;
+                btnDelete.Enabled = false;
+            }
         }
 
         private void LoadData(List<EmployeeEntities> Emp=null)
@@ -28,7 +36,7 @@ namespace GUI.UserControls
 
             var items = Emp==null? EmpPro.GetAllData() as List<EmployeeEntities>:Emp;
             int index = 0;
-            dgvListEmp.ColumnCount = 5;
+            dgvListEmp.ColumnCount = 7;
             foreach (var item in items)
             {
                 dgvListEmp.Rows.Add();
@@ -37,6 +45,8 @@ namespace GUI.UserControls
                 dgvListEmp.Rows[index].Cells[2].Value = item.Birthday.ToString("dd/MM/yyyy");
                 dgvListEmp.Rows[index].Cells[3].Value = item.Address;
                 dgvListEmp.Rows[index].Cells[4].Value = item.Phone;
+                dgvListEmp.Rows[index].Cells[5].Value = item.Account;
+                //dgvListEmp.Rows[index].Cells[6].Value = item.Password;
                 index++;
             }
         }
@@ -59,9 +69,13 @@ namespace GUI.UserControls
                 Emp.Birthday = dtpBirthday.Value;
                 Emp.Address = txtAddress.Text;
                 Emp.Phone = txtPhone.Text;
+                Emp.Account = txtAccount.Text.ToLower();
+                Emp.Password = Security.Encrypt(txtPassword.Text.ToLower());
+                Emp.Role = 1;
 
                 EmpPro.CreateOrUpdate(Emp);
                 LoadData();
+                SetNull();
             }
             catch(Exception ex)
             {
@@ -79,6 +93,8 @@ namespace GUI.UserControls
             dtpBirthday.Text = row.Cells[2].Value.ToString();
             txtAddress.Text = row.Cells[3].Value.ToString();
             txtPhone.Text = row.Cells[4].Value.ToString();
+            txtAccount.Text = row.Cells[5].Value.ToString();
+            //txtPassword.Text = row.Cells[6].Value.ToString();
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -91,15 +107,24 @@ namespace GUI.UserControls
         {
             try
             {
-                var Emp = new EmployeeEntities();
-                Emp.ID = int.Parse(txtID.Text.Substring(2));
-                Emp.Name = txtName.Text;
-                Emp.Birthday = dtpBirthday.Value;
-                Emp.Address = txtAddress.Text;
-                Emp.Phone = txtPhone.Text;
+                if (int.Parse(txtID.Text.Substring(2)) == 1)
+                {
+                    MessageBox.Show("Tài khoản này không thể thay đổi thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    var Emp = new EmployeeEntities();
+                    Emp.ID = int.Parse(txtID.Text.Substring(2));
+                    Emp.Name = txtName.Text;
+                    Emp.Birthday = dtpBirthday.Value;
+                    Emp.Address = txtAddress.Text;
+                    Emp.Phone = txtPhone.Text;
+                    Emp.Role = 1;
 
-                EmpPro.CreateOrUpdate(Emp);
-                LoadData();
+                    EmpPro.CreateOrUpdate(Emp);
+                    LoadData();
+                }
+                SetNull();
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -110,16 +135,23 @@ namespace GUI.UserControls
         {
             try
             {
-                var Emp = new EmployeeEntities();
-                Emp.ID = int.Parse(txtID.Text.Substring(2));
-                Emp.Name = txtName.Text;
-
-                var result= MessageBox.Show($"Bạn muốn xoá nhân viên {Emp.Name} không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (result == DialogResult.Yes)
+                if (txtAccount.Text == "Admin" || txtAccount.Text == "admin")
                 {
-                    EmpPro.Delete(Emp);
-                    LoadData();
-                }   
+                    MessageBox.Show("Tài khoản này không thể thay đổi thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    var Emp = new EmployeeEntities();
+                    Emp.ID = int.Parse(txtID.Text.Substring(2));
+                    Emp.Name = txtName.Text;
+
+                    var result = MessageBox.Show($"Bạn muốn xoá nhân viên {Emp.Name} không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        EmpPro.Delete(Emp);
+                        LoadData();
+                    }
+                }
             }
             catch (Exception ex)
             {

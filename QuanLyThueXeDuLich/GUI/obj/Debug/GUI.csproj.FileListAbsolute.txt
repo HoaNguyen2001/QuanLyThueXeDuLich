@@ -114,3 +114,4 @@ G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\GUI\bin\Debug\vi-VN\GUI.resources.dll
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\GUI\obj\Debug\GUI.Forms.MainForm.vi-VN.resources
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\GUI\obj\Debug\vi-VN\GUI.resources.dll
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\GUI\obj\Debug\GUI.Forms.LoginForm.resources

@@ -8,7 +8,6 @@ using System.Windows.Forms;
 using DAL;
 using DTO.Entities;
 using Microsoft.EntityFrameworkCore;
-using NUnit.Framework;
 
 namespace BUS.Process
 {

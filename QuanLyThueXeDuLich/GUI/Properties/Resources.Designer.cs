@@ -93,6 +93,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Actions_file_open_icon {
+            get {
+                object obj = ResourceManager.GetObject("Actions-file-open-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Actions_list_add_user_icon {
             get {
                 object obj = ResourceManager.GetObject("Actions-list-add-user-icon", resourceCulture);
@@ -116,6 +126,26 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap Apps_preferences_web_browser_identification_icon {
             get {
                 object obj = ResourceManager.GetObject("Apps-preferences-web-browser-identification-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap b7uBSLN {
+            get {
+                object obj = ResourceManager.GetObject("b7uBSLN", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap d198830a0c6f5753c4dc7a2f4bc2ffb7 {
+            get {
+                object obj = ResourceManager.GetObject("d198830a0c6f5753c4dc7a2f4bc2ffb7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +196,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap lamborghini_centenario_2017_1600_01_1514410005837 {
             get {
                 object obj = ResourceManager.GetObject("lamborghini-centenario-2017-1600-01-1514410005837", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout_icon {
+            get {
+                object obj = ResourceManager.GetObject("logout-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

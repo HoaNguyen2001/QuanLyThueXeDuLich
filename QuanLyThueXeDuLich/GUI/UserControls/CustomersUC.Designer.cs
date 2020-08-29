@@ -61,24 +61,29 @@
             // 
             // btnLamMoi
             // 
-            this.btnLamMoi.Location = new System.Drawing.Point(625, 284);
-            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLamMoi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnLamMoi.Image = global::GUI.Properties.Resources.Windows_Restart_icon;
+            this.btnLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLamMoi.Location = new System.Drawing.Point(616, 284);
+            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(5);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(102, 42);
+            this.btnLamMoi.Size = new System.Drawing.Size(120, 42);
             this.btnLamMoi.TabIndex = 90;
             this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLamMoi.UseVisualStyleBackColor = true;
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // cbbTimKiemTheo
             // 
+            this.cbbTimKiemTheo.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbbTimKiemTheo.FormattingEnabled = true;
             this.cbbTimKiemTheo.Items.AddRange(new object[] {
             "Tên Khách Hàng",
             "Địa chỉ",
             "Số CMND"});
             this.cbbTimKiemTheo.Location = new System.Drawing.Point(950, 292);
-            this.cbbTimKiemTheo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cbbTimKiemTheo.Margin = new System.Windows.Forms.Padding(5);
             this.cbbTimKiemTheo.Name = "cbbTimKiemTheo";
             this.cbbTimKiemTheo.Size = new System.Drawing.Size(176, 29);
             this.cbbTimKiemTheo.TabIndex = 89;
@@ -88,17 +93,19 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label7.Location = new System.Drawing.Point(945, 249);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 21);
+            this.label7.Size = new System.Drawing.Size(128, 22);
             this.label7.TabIndex = 88;
             this.label7.Text = "Tìm kiếm theo";
             // 
             // txtTenKH
             // 
-            this.txtTenKH.Location = new System.Drawing.Point(157, 180);
-            this.txtTenKH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTenKH.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTenKH.Location = new System.Drawing.Point(172, 181);
+            this.txtTenKH.Margin = new System.Windows.Forms.Padding(5);
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.Size = new System.Drawing.Size(236, 29);
             this.txtTenKH.TabIndex = 87;
@@ -106,10 +113,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(5, 180);
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label6.Location = new System.Drawing.Point(5, 184);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 21);
+            this.label6.Size = new System.Drawing.Size(149, 22);
             this.label6.TabIndex = 86;
             this.label6.Text = "Tên Khách Hàng";
             // 
@@ -117,10 +125,11 @@
             // 
             this.grGioiTinh.Controls.Add(this.rdbNu);
             this.grGioiTinh.Controls.Add(this.rdbNam);
-            this.grGioiTinh.Location = new System.Drawing.Point(422, 145);
-            this.grGioiTinh.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.grGioiTinh.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.grGioiTinh.Location = new System.Drawing.Point(436, 145);
+            this.grGioiTinh.Margin = new System.Windows.Forms.Padding(5);
             this.grGioiTinh.Name = "grGioiTinh";
-            this.grGioiTinh.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.grGioiTinh.Padding = new System.Windows.Forms.Padding(5);
             this.grGioiTinh.Size = new System.Drawing.Size(382, 99);
             this.grGioiTinh.TabIndex = 80;
             this.grGioiTinh.TabStop = false;
@@ -130,9 +139,9 @@
             // 
             this.rdbNu.AutoSize = true;
             this.rdbNu.Location = new System.Drawing.Point(247, 39);
-            this.rdbNu.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.rdbNu.Margin = new System.Windows.Forms.Padding(5);
             this.rdbNu.Name = "rdbNu";
-            this.rdbNu.Size = new System.Drawing.Size(51, 25);
+            this.rdbNu.Size = new System.Drawing.Size(53, 26);
             this.rdbNu.TabIndex = 1;
             this.rdbNu.TabStop = true;
             this.rdbNu.Text = "Nữ";
@@ -142,9 +151,9 @@
             // 
             this.rdbNam.AutoSize = true;
             this.rdbNam.Location = new System.Drawing.Point(67, 39);
-            this.rdbNam.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.rdbNam.Margin = new System.Windows.Forms.Padding(5);
             this.rdbNam.Name = "rdbNam";
-            this.rdbNam.Size = new System.Drawing.Size(63, 25);
+            this.rdbNam.Size = new System.Drawing.Size(67, 26);
             this.rdbNam.TabIndex = 0;
             this.rdbNam.TabStop = true;
             this.rdbNam.Text = "Nam";
@@ -152,8 +161,9 @@
             // 
             // txtSDTKH
             // 
+            this.txtSDTKH.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtSDTKH.Location = new System.Drawing.Point(980, 75);
-            this.txtSDTKH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtSDTKH.Margin = new System.Windows.Forms.Padding(5);
             this.txtSDTKH.Name = "txtSDTKH";
             this.txtSDTKH.Size = new System.Drawing.Size(251, 29);
             this.txtSDTKH.TabIndex = 77;
@@ -161,17 +171,19 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.Location = new System.Drawing.Point(854, 80);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 21);
+            this.label4.Size = new System.Drawing.Size(116, 22);
             this.label4.TabIndex = 74;
             this.label4.Text = "Số điện thoại";
             // 
             // txtSoCMNDKH
             // 
-            this.txtSoCMNDKH.Location = new System.Drawing.Point(560, 75);
-            this.txtSoCMNDKH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtSoCMNDKH.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtSoCMNDKH.Location = new System.Drawing.Point(574, 75);
+            this.txtSoCMNDKH.Margin = new System.Windows.Forms.Padding(5);
             this.txtSoCMNDKH.Name = "txtSoCMNDKH";
             this.txtSoCMNDKH.Size = new System.Drawing.Size(241, 29);
             this.txtSoCMNDKH.TabIndex = 78;
@@ -179,17 +191,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(417, 80);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.Location = new System.Drawing.Point(432, 77);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 21);
+            this.label3.Size = new System.Drawing.Size(96, 22);
             this.label3.TabIndex = 75;
             this.label3.Text = "Số CMND";
             // 
             // txtMaKH
             // 
-            this.txtMaKH.Location = new System.Drawing.Point(157, 74);
-            this.txtMaKH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMaKH.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMaKH.Location = new System.Drawing.Point(172, 75);
+            this.txtMaKH.Margin = new System.Windows.Forms.Padding(5);
             this.txtMaKH.Name = "txtMaKH";
             this.txtMaKH.Size = new System.Drawing.Size(236, 29);
             this.txtMaKH.TabIndex = 79;
@@ -197,72 +211,91 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 74);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(5, 78);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 21);
+            this.label2.Size = new System.Drawing.Size(145, 22);
             this.label2.TabIndex = 73;
             this.label2.Text = "Mã Khách Hàng";
             // 
             // btnSuaKH
             // 
-            this.btnSuaKH.Location = new System.Drawing.Point(250, 284);
-            this.btnSuaKH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSuaKH.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSuaKH.Image = global::GUI.Properties.Resources.Actions_document_edit_icon;
+            this.btnSuaKH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSuaKH.Location = new System.Drawing.Point(248, 284);
+            this.btnSuaKH.Margin = new System.Windows.Forms.Padding(5);
             this.btnSuaKH.Name = "btnSuaKH";
-            this.btnSuaKH.Size = new System.Drawing.Size(108, 40);
+            this.btnSuaKH.Size = new System.Drawing.Size(95, 40);
             this.btnSuaKH.TabIndex = 83;
             this.btnSuaKH.Text = "Sửa";
+            this.btnSuaKH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSuaKH.UseVisualStyleBackColor = true;
             this.btnSuaKH.Click += new System.EventHandler(this.btnSuaKH_Click);
             // 
             // btnThemKH
             // 
-            this.btnThemKH.Location = new System.Drawing.Point(62, 283);
-            this.btnThemKH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnThemKH.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnThemKH.Image = global::GUI.Properties.Resources.Actions_list_add_user_icon;
+            this.btnThemKH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThemKH.Location = new System.Drawing.Point(49, 283);
+            this.btnThemKH.Margin = new System.Windows.Forms.Padding(5);
             this.btnThemKH.Name = "btnThemKH";
-            this.btnThemKH.Size = new System.Drawing.Size(108, 40);
+            this.btnThemKH.Size = new System.Drawing.Size(130, 40);
             this.btnThemKH.TabIndex = 82;
             this.btnThemKH.Text = "Thêm mới";
+            this.btnThemKH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThemKH.UseVisualStyleBackColor = true;
             this.btnThemKH.Click += new System.EventHandler(this.btnThemKH_Click);
             // 
             // txtDiaChi
             // 
+            this.txtDiaChi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtDiaChi.Location = new System.Drawing.Point(980, 184);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(5);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(251, 29);
             this.txtDiaChi.TabIndex = 76;
             // 
             // btnTimKiemKH
             // 
-            this.btnTimKiemKH.Location = new System.Drawing.Point(795, 286);
-            this.btnTimKiemKH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnTimKiemKH.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTimKiemKH.Image = global::GUI.Properties.Resources.red_search_icon;
+            this.btnTimKiemKH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKiemKH.Location = new System.Drawing.Point(787, 286);
+            this.btnTimKiemKH.Margin = new System.Windows.Forms.Padding(5);
             this.btnTimKiemKH.Name = "btnTimKiemKH";
-            this.btnTimKiemKH.Size = new System.Drawing.Size(108, 40);
+            this.btnTimKiemKH.Size = new System.Drawing.Size(125, 40);
             this.btnTimKiemKH.TabIndex = 85;
             this.btnTimKiemKH.Text = "Tìm Kiếm";
+            this.btnTimKiemKH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiemKH.UseVisualStyleBackColor = true;
             this.btnTimKiemKH.Click += new System.EventHandler(this.btnTimKiemKH_Click);
             // 
             // btnXoaKH
             // 
-            this.btnXoaKH.Location = new System.Drawing.Point(445, 284);
-            this.btnXoaKH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnXoaKH.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnXoaKH.Image = global::GUI.Properties.Resources.Actions_edit_delete_icon;
+            this.btnXoaKH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoaKH.Location = new System.Drawing.Point(443, 284);
+            this.btnXoaKH.Margin = new System.Windows.Forms.Padding(5);
             this.btnXoaKH.Name = "btnXoaKH";
-            this.btnXoaKH.Size = new System.Drawing.Size(108, 40);
+            this.btnXoaKH.Size = new System.Drawing.Size(89, 40);
             this.btnXoaKH.TabIndex = 84;
             this.btnXoaKH.Text = "Xóa";
+            this.btnXoaKH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoaKH.UseVisualStyleBackColor = true;
             this.btnXoaKH.Click += new System.EventHandler(this.btnXoaKH_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.Location = new System.Drawing.Point(854, 187);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 21);
+            this.label5.Size = new System.Drawing.Size(68, 22);
             this.label5.TabIndex = 72;
             this.label5.Text = "Địa chỉ";
             // 
@@ -277,7 +310,7 @@
             this.SDT,
             this.DiaChi});
             this.dgvKhachHang.Location = new System.Drawing.Point(5, 342);
-            this.dgvKhachHang.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dgvKhachHang.Margin = new System.Windows.Forms.Padding(5);
             this.dgvKhachHang.Name = "dgvKhachHang";
             this.dgvKhachHang.Size = new System.Drawing.Size(1224, 350);
             this.dgvKhachHang.TabIndex = 81;
@@ -323,6 +356,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::GUI.Properties.Resources.hinh_nen_sieu_xe_full_hd_cho_laptop_3;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.cbbTimKiemTheo);
             this.Controls.Add(this.label7);
@@ -343,7 +378,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dgvKhachHang);
             this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "CustomersUC";
             this.Size = new System.Drawing.Size(1234, 697);
             this.grGioiTinh.ResumeLayout(false);
