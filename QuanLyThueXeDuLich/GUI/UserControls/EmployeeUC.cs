@@ -33,12 +33,29 @@ namespace GUI.UserControls
         private void LoadData(List<EmployeeEntities> Emp=null)
         {
             dgvListEmp.Rows.Clear();
-
-            var items = Emp==null? EmpPro.GetAllData() as List<EmployeeEntities>:Emp;
-            int index = 0;
-            dgvListEmp.ColumnCount = 7;
-            foreach (var item in items)
+            if (LoginInfo.Role == 0)
             {
+                var items = Emp == null ? EmpPro.GetAllData() as List<EmployeeEntities> : Emp;
+                int index = 0;
+                dgvListEmp.ColumnCount = 7;
+                foreach (var item in items)
+                {
+                    dgvListEmp.Rows.Add();
+                    dgvListEmp.Rows[index].Cells[0].Value = item.ID;
+                    dgvListEmp.Rows[index].Cells[1].Value = item.Name;
+                    dgvListEmp.Rows[index].Cells[2].Value = item.Birthday.ToString("dd/MM/yyyy");
+                    dgvListEmp.Rows[index].Cells[3].Value = item.Address;
+                    dgvListEmp.Rows[index].Cells[4].Value = item.Phone;
+                    dgvListEmp.Rows[index].Cells[5].Value = item.Account;
+                    //dgvListEmp.Rows[index].Cells[6].Value = item.Password;
+                    index++;
+                }
+            }
+            else
+            {
+                var item = EmpPro.GetByID(LoginInfo.ID);
+                int index = 0;
+                dgvListEmp.ColumnCount = 7;
                 dgvListEmp.Rows.Add();
                 dgvListEmp.Rows[index].Cells[0].Value = item.ID;
                 dgvListEmp.Rows[index].Cells[1].Value = item.Name;

@@ -44,6 +44,7 @@ namespace GUI.Forms
             var account = db.Employees.Where(x => x.Account == Acc && x.Password == _pw).FirstOrDefault();
             if (account != null)
             {
+                LoginInfo.ID = account.ID;
                 LoginInfo.Name = account.Name;
                 LoginInfo.Role = account.Role;
                 new MainForm().Visible=true;

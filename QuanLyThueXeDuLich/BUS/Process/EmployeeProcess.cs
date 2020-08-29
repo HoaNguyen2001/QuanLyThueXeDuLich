@@ -94,5 +94,11 @@ namespace BUS.Process
                 return null;
             }
         }
+
+        public EmployeeEntities GetByID(int ID)
+        {
+            var Emps = db.Employees.Where(x=>x.ID==ID).FirstOrDefault();
+            return Emps;
+        }
     }
 }
