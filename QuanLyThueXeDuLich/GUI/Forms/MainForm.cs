@@ -89,6 +89,30 @@ namespace GUI.Forms
                 new LoginForm().Visible = true;
                 this.Visible = false;
             }
+            else
+            {
+                this.Visible = true;
+            }
+        }
+
+        private void btnquanlyphat_Click(object sender, EventArgs e)
+        {
+            lbTitle.Text = "Quản lý vi phạm nộp phạt";
+
+            pnMain.Controls.Clear();
+            ManagePunish mgP = new ManagePunish();
+            pnMain.Controls.Add(mgP);
+            mgP.Show();
+        }
+
+        private void btnquanlyhoadon_Click(object sender, EventArgs e)
+        {
+            lbTitle.Text = "Quản lý hóa đơn";
+
+            pnMain.Controls.Clear();
+            ManageBill mb = new ManageBill();
+            pnMain.Controls.Add(mb);
+            mb.Show();
         }
     }
 }

@@ -40,6 +40,8 @@
             this.btn_Customers = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnEmployee = new System.Windows.Forms.Button();
+            this.btnquanlyphat = new System.Windows.Forms.Button();
+            this.btnquanlyhoadon = new System.Windows.Forms.Button();
             this.pnLeft.SuspendLayout();
             this.pnTitle.SuspendLayout();
             this.pnLogo.SuspendLayout();
@@ -50,7 +52,9 @@
             // 
             resources.ApplyResources(this.pnLeft, "pnLeft");
             this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.pnLeft.Controls.Add(this.btnquanlyphat);
             this.pnLeft.Controls.Add(this.btnLogOut);
+            this.pnLeft.Controls.Add(this.btnquanlyhoadon);
             this.pnLeft.Controls.Add(this.btn_InforCar);
             this.pnLeft.Controls.Add(this.btn_Customers);
             this.pnLeft.Controls.Add(this.button1);
@@ -135,6 +139,24 @@
             this.btnEmployee.UseVisualStyleBackColor = false;
             this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
+            // btnquanlyphat
+            // 
+            this.btnquanlyphat.BackColor = System.Drawing.Color.MistyRose;
+            this.btnquanlyphat.Image = global::GUI.Properties.Resources.vw_beetle_icon;
+            resources.ApplyResources(this.btnquanlyphat, "btnquanlyphat");
+            this.btnquanlyphat.Name = "btnquanlyphat";
+            this.btnquanlyphat.UseVisualStyleBackColor = false;
+            this.btnquanlyphat.Click += new System.EventHandler(this.btnquanlyphat_Click);
+            // 
+            // btnquanlyhoadon
+            // 
+            this.btnquanlyhoadon.BackColor = System.Drawing.Color.MistyRose;
+            this.btnquanlyhoadon.Image = global::GUI.Properties.Resources.Distributor_report_icon;
+            resources.ApplyResources(this.btnquanlyhoadon, "btnquanlyhoadon");
+            this.btnquanlyhoadon.Name = "btnquanlyhoadon";
+            this.btnquanlyhoadon.UseVisualStyleBackColor = false;
+            this.btnquanlyhoadon.Click += new System.EventHandler(this.btnquanlyhoadon_Click);
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -166,5 +188,7 @@
         private System.Windows.Forms.Button btn_Customers;
         private System.Windows.Forms.Button btn_InforCar;
         private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Button btnquanlyphat;
+        private System.Windows.Forms.Button btnquanlyhoadon;
     }
 }
