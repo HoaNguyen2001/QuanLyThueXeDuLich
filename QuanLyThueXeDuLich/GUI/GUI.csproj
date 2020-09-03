@@ -179,6 +179,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\CreateNewCusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateNewCusForm.Designer.cs">
+      <DependentUpon>CreateNewCusForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +235,9 @@
     <Compile Include="UserControls\ReportUC.Designer.cs">
       <DependentUpon>ReportUC.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\CreateNewCusForm.resx">
+      <DependentUpon>CreateNewCusForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

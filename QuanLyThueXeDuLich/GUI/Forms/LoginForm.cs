@@ -37,22 +37,29 @@ namespace GUI.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            var Acc = txtAccount.Text.ToLower();
-            var PW = txtPassword.Text.ToLower();
-            var _pw = Security.Encrypt(PW);
+            try
+            {
+                var Acc = txtAccount.Text.ToLower();
+                var PW = txtPassword.Text.ToLower();
+                var _pw = Security.Encrypt(PW);
 
-            var account = db.Employees.Where(x => x.Account == Acc && x.Password == _pw).FirstOrDefault();
-            if (account != null)
-            {
-                LoginInfo.ID = account.ID;
-                LoginInfo.Name = account.Name;
-                LoginInfo.Role = account.Role;
-                new MainForm().Visible=true;
-                this.Visible = false;
+                var account = db.Employees.Where(x => x.Account == Acc && x.Password == _pw).FirstOrDefault();
+                if (account != null)
+                {
+                    LoginInfo.ID = account.ID;
+                    LoginInfo.Name = account.Name;
+                    LoginInfo.Role = account.Role;
+                    new MainForm().Visible = true;
+                    this.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Thông tin tài khoản hoặc mật khẩu không chính xác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Thông tin tài khoản hoặc mật khẩu không chính xác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

@@ -117,3 +117,4 @@ G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\GUI\obj\Debug\GUI.Forms.LoginForm.resources
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\GUI\obj\Debug\GUI.UserControls.ManageBill.resources
 G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\GUI\obj\Debug\GUI.UserControls.ManagePunish.resources
+G:\DHCNHN\Nam3_KiHe\Lap trinh Windows\BTL\QuanLyThueXeDuLich\QuanLyThueXeDuLich\GUI\obj\Debug\GUI.Forms.CreateNewCusForm.resources

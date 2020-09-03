@@ -171,6 +171,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Globals\Security.cs" />
+    <Compile Include="Process\BillsProcess.cs" />
+    <Compile Include="Process\CustomerProcess.cs" />
     <Compile Include="Process\EmployeeProcess.cs" />
     <Compile Include="Process\InforCarProcess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

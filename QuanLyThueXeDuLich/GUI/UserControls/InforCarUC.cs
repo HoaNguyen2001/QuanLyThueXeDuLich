@@ -103,37 +103,40 @@ namespace GUI.UserControls
         {
             try
             {
-                conn = new SqlConnection(connstring);
-                if (conn.State == ConnectionState.Closed)
-                    conn.Open();
-                string sql = "Insert into InforCar values (@Name, @ManufacturerCar, @Color, @RegistrationDate, @Status, @NumCar, @PricePerDay, @ManufactureYear, @NumberOfCar, @DateAddCar)";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                //cmd.Parameters.AddWithValue("@ID", txtMaXe.Text);
-                cmd.Parameters.AddWithValue("@Name", txtTenXe.Text);
-                cmd.Parameters.AddWithValue("@ManufacturerCar", txtHangXe.Text);
-                cmd.Parameters.AddWithValue("@Color", txtMauSon.Text);
-                cmd.Parameters.AddWithValue("@RegistrationDate", dtpNgayDangKi.Value);
-                if (rdbMoi.Checked)
+                var result = MessageBox.Show($"Bạn có muốn thêm {txtTenXe.Text} ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if (result == DialogResult.OK)
                 {
-                    cmd.Parameters.AddWithValue("@Status", rdbMoi.Text);
+                    conn = new SqlConnection(connstring);
+                    if (conn.State == ConnectionState.Closed)
+                        conn.Open();
+                    string sql = "Insert into InforCar values (@Name, @ManufacturerCar, @Color, @RegistrationDate, @Status, @NumCar, @PricePerDay, @ManufactureYear, @NumberOfCar, @DateAddCar)";
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    //cmd.Parameters.AddWithValue("@ID", txtMaXe.Text);
+                    cmd.Parameters.AddWithValue("@Name", txtTenXe.Text);
+                    cmd.Parameters.AddWithValue("@ManufacturerCar", txtHangXe.Text);
+                    cmd.Parameters.AddWithValue("@Color", txtMauSon.Text);
+                    cmd.Parameters.AddWithValue("@RegistrationDate", dtpNgayDangKi.Value);
+                    if (rdbMoi.Checked)
+                    {
+                        cmd.Parameters.AddWithValue("@Status", rdbMoi.Text);
+                    }
+                    else
+                    {
+
+                        cmd.Parameters.AddWithValue("@Status", rdbCu.Text);
+                    }
+                    cmd.Parameters.AddWithValue("@NumCar", Int32.Parse(txtBienSoXe.Text));
+                    cmd.Parameters.AddWithValue("@PricePerDay", Int32.Parse(txtGiaMoiNgay.Text));
+                    cmd.Parameters.AddWithValue("@ManufactureYear", dtpNamSanXuat.Value);
+                    cmd.Parameters.AddWithValue("@NumberOfCar", Int32.Parse(txtSoLuong.Text));
+                    cmd.Parameters.AddWithValue("@DateAddCar", dtpNgayNhap.Value);
+                    cmd.ExecuteNonQuery();
+
+                    if (conn.State == ConnectionState.Open)
+                        conn.Close();
+
+                    LoadData();
                 }
-                else
-                {
-
-                    cmd.Parameters.AddWithValue("@Status", rdbCu.Text);
-                }
-                cmd.Parameters.AddWithValue("@NumCar", Int32.Parse(txtBienSoXe.Text));
-                cmd.Parameters.AddWithValue("@PricePerDay", Int32.Parse(txtGiaMoiNgay.Text));
-                cmd.Parameters.AddWithValue("@ManufactureYear", dtpNamSanXuat.Value);
-                cmd.Parameters.AddWithValue("@NumberOfCar", Int32.Parse(txtSoLuong.Text));
-                cmd.Parameters.AddWithValue("@DateAddCar",dtpNgayNhap.Value);
-                cmd.ExecuteNonQuery();
-
-                if (conn.State == ConnectionState.Open)
-                    conn.Close();
-
-                LoadData();
-
             }
             catch (Exception ex)
             {

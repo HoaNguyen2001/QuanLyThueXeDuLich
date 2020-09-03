@@ -32,14 +32,32 @@ namespace GUI.UserControls
 
         private void LoadData(List<EmployeeEntities> Emp=null)
         {
-            dgvListEmp.Rows.Clear();
-            if (LoginInfo.Role == 0)
+            try
             {
-                var items = Emp == null ? EmpPro.GetAllData() as List<EmployeeEntities> : Emp;
-                int index = 0;
-                dgvListEmp.ColumnCount = 7;
-                foreach (var item in items)
+                dgvListEmp.Rows.Clear();
+                if (LoginInfo.Role == 0)
                 {
+                    var items = Emp == null ? EmpPro.GetAllData() as List<EmployeeEntities> : Emp;
+                    int index = 0;
+                    dgvListEmp.ColumnCount = 7;
+                    foreach (var item in items)
+                    {
+                        dgvListEmp.Rows.Add();
+                        dgvListEmp.Rows[index].Cells[0].Value = item.ID;
+                        dgvListEmp.Rows[index].Cells[1].Value = item.Name;
+                        dgvListEmp.Rows[index].Cells[2].Value = item.Birthday.ToString("dd/MM/yyyy");
+                        dgvListEmp.Rows[index].Cells[3].Value = item.Address;
+                        dgvListEmp.Rows[index].Cells[4].Value = item.Phone;
+                        dgvListEmp.Rows[index].Cells[5].Value = item.Account;
+                        //dgvListEmp.Rows[index].Cells[6].Value = item.Password;
+                        index++;
+                    }
+                }
+                else
+                {
+                    var item = EmpPro.GetByID(LoginInfo.ID);
+                    int index = 0;
+                    dgvListEmp.ColumnCount = 7;
                     dgvListEmp.Rows.Add();
                     dgvListEmp.Rows[index].Cells[0].Value = item.ID;
                     dgvListEmp.Rows[index].Cells[1].Value = item.Name;
@@ -51,20 +69,9 @@ namespace GUI.UserControls
                     index++;
                 }
             }
-            else
+            catch(Exception ex)
             {
-                var item = EmpPro.GetByID(LoginInfo.ID);
-                int index = 0;
-                dgvListEmp.ColumnCount = 7;
-                dgvListEmp.Rows.Add();
-                dgvListEmp.Rows[index].Cells[0].Value = item.ID;
-                dgvListEmp.Rows[index].Cells[1].Value = item.Name;
-                dgvListEmp.Rows[index].Cells[2].Value = item.Birthday.ToString("dd/MM/yyyy");
-                dgvListEmp.Rows[index].Cells[3].Value = item.Address;
-                dgvListEmp.Rows[index].Cells[4].Value = item.Phone;
-                dgvListEmp.Rows[index].Cells[5].Value = item.Account;
-                //dgvListEmp.Rows[index].Cells[6].Value = item.Password;
-                index++;
+                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -74,6 +81,8 @@ namespace GUI.UserControls
             dtpBirthday.Value = DateTime.Now;
             txtAddress.Text = "";
             txtPhone.Text = "";
+            txtAccount.Text = "";
+            txtPassword.Text = "";
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -102,22 +111,38 @@ namespace GUI.UserControls
 
         private void dgvListEmp_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            var index = dgvListEmp.CurrentCell.RowIndex;
-
-            var row = dgvListEmp.Rows[index];
-            txtID.Text= $"NV{row.Cells[0].Value.ToString()}";
-            txtName.Text = row.Cells[1].Value.ToString();
-            dtpBirthday.Text = row.Cells[2].Value.ToString();
-            txtAddress.Text = row.Cells[3].Value.ToString();
-            txtPhone.Text = row.Cells[4].Value.ToString();
-            txtAccount.Text = row.Cells[5].Value.ToString();
-            //txtPassword.Text = row.Cells[6].Value.ToString();
+            try
+            {
+                var index = dgvListEmp.CurrentCell.RowIndex;
+                if (index >= 0 && index <= dgvListEmp.Rows.Count - 2)
+                {
+                    var row = dgvListEmp.Rows[index];
+                    txtID.Text = $"NV{row.Cells[0].Value.ToString()}";
+                    txtName.Text = row.Cells[1].Value.ToString();
+                    dtpBirthday.Text = row.Cells[2].Value.ToString();
+                    txtAddress.Text = row.Cells[3].Value.ToString();
+                    txtPhone.Text = row.Cells[4].Value.ToString();
+                    txtAccount.Text = row.Cells[5].Value.ToString();
+                    //txtPassword.Text = row.Cells[6].Value.ToString();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            SetNull();
-            LoadData();
+            try
+            {
+                SetNull();
+                LoadData();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

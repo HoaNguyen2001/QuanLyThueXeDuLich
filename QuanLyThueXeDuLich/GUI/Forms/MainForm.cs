@@ -81,17 +81,14 @@ namespace GUI.Forms
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            var reult = MessageBox.Show("Bạn muốn đăng xuất?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+           var reult = MessageBox.Show("Bạn muốn đóng chương trình?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (reult == DialogResult.Yes)
             {
-                LoginInfo.Name = "";
-                LoginInfo.Role = 99;
-                new LoginForm().Visible = true;
-                this.Visible = false;
+                Application.Exit();
             }
             else
             {
-                this.Visible = true;
+                this.Show();
             }
         }
 

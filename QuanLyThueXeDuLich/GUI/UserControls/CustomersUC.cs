@@ -68,28 +68,33 @@ namespace GUI.UserControls
         {
             try
             {
-                conn = new SqlConnection(connstring);
-                if (conn.State == ConnectionState.Closed)
-                    conn.Open();
-                string sql = "Insert into Customers values (@Name, @Sex, @IDCardNumber, @Phone, @Address)";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@Name", txtTenKH.Text);
-                cmd.Parameters.AddWithValue("@IDCardNumber", Int32.Parse(txtSoCMNDKH.Text));
-                cmd.Parameters.AddWithValue("@Phone", txtSDTKH.Text);
-                cmd.Parameters.AddWithValue("@Address", txtDiaChi.Text);
-                if (rdbNam.Checked)
+                var result = MessageBox.Show($"Bạn có muốn thêm {txtTenKH.Text} ?","Thông báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
+                if (result == DialogResult.OK)
                 {
-                    cmd.Parameters.AddWithValue("@Sex", true);
-                }
-                else
-                {
+                    conn = new SqlConnection(connstring);
+                    if (conn.State == ConnectionState.Closed)
+                        conn.Open();
+                    string sql = "Insert into Customers values (@Name, @Sex, @IDCardNumber, @Phone, @Address)";
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@Name", txtTenKH.Text);
+                    cmd.Parameters.AddWithValue("@IDCardNumber", Int32.Parse(txtSoCMNDKH.Text));
+                    cmd.Parameters.AddWithValue("@Phone", txtSDTKH.Text);
+                    cmd.Parameters.AddWithValue("@Address", txtDiaChi.Text);
+                    if (rdbNam.Checked)
+                    {
+                        cmd.Parameters.AddWithValue("@Sex", true);
+                    }
+                    else
+                    {
 
-                    cmd.Parameters.AddWithValue("@Sex", false);
+                        cmd.Parameters.AddWithValue("@Sex", false);
+                    }
+                    cmd.ExecuteNonQuery();
+                    if (conn.State == ConnectionState.Open)
+                        conn.Close();
+                    LoadData();
+                    MessageBox.Show($"Thêm thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 }
-                cmd.ExecuteNonQuery();
-                if (conn.State == ConnectionState.Open)
-                    conn.Close();
-                LoadData();
 
             }
             catch (Exception ex)
@@ -102,29 +107,33 @@ namespace GUI.UserControls
         {
             try
             {
-                conn = new SqlConnection(connstring);
-                if (conn.State == ConnectionState.Closed)
-                    conn.Open();
-                string sql = "Update Customers set Name=@Name, Sex=@Sex, IDCardNumber=@IDCardNumber, Phone=@Phone, Address=@Address Where ID='" + txtMaKH.Text + "'";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@Name", txtTenKH.Text);
-                cmd.Parameters.AddWithValue("@IDCardNumber", Int32.Parse(txtSoCMNDKH.Text));
-                cmd.Parameters.AddWithValue("@Phone", txtSDTKH.Text);
-                cmd.Parameters.AddWithValue("@Address", txtDiaChi.Text);
-                if (rdbNam.Checked)
+                var result = MessageBox.Show($"Bạn có muốn sửa {txtTenKH.Text} ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if (result == DialogResult.OK)
                 {
-                    cmd.Parameters.AddWithValue("@Sex", true);
-                }
-                else
-                {
+                    conn = new SqlConnection(connstring);
+                    if (conn.State == ConnectionState.Closed)
+                        conn.Open();
+                    string sql = "Update Customers set Name=@Name, Sex=@Sex, IDCardNumber=@IDCardNumber, Phone=@Phone, Address=@Address Where ID='" + txtMaKH.Text + "'";
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@Name", txtTenKH.Text);
+                    cmd.Parameters.AddWithValue("@IDCardNumber", Int32.Parse(txtSoCMNDKH.Text));
+                    cmd.Parameters.AddWithValue("@Phone", txtSDTKH.Text);
+                    cmd.Parameters.AddWithValue("@Address", txtDiaChi.Text);
+                    if (rdbNam.Checked)
+                    {
+                        cmd.Parameters.AddWithValue("@Sex", true);
+                    }
+                    else
+                    {
 
-                    cmd.Parameters.AddWithValue("@Sex", false);
+                        cmd.Parameters.AddWithValue("@Sex", false);
+                    }
+                    cmd.ExecuteNonQuery();
+                    if (conn.State == ConnectionState.Open)
+                        conn.Close();
+                    LoadData();
+                    MessageBox.Show($"Sửa thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 }
-                cmd.ExecuteNonQuery();
-                if (conn.State == ConnectionState.Open)
-                    conn.Close();
-                LoadData();
-
             }
             catch (Exception ex)
             {
@@ -145,6 +154,7 @@ namespace GUI.UserControls
                     SqlCommand cmd = new SqlCommand("Delete from Customers Where ID='" + txtMaKH.Text + "'", conn);
                     cmd.ExecuteNonQuery();
                     LoadData();
+                    MessageBox.Show($"Xoá thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 }
 
             }

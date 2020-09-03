@@ -28,19 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportUC));
             this.dgvReportCar = new System.Windows.Forms.DataGridView();
-            this.btnReview = new System.Windows.Forms.Button();
-            this.btnExport = new System.Windows.Forms.Button();
-            this.cbbTypeReport = new System.Windows.Forms.ComboBox();
-            this.gbRepot = new System.Windows.Forms.GroupBox();
-            this.cbCar = new System.Windows.Forms.CheckBox();
-            this.cbbCar = new System.Windows.Forms.ComboBox();
-            this.cbReportRevenue = new System.Windows.Forms.CheckBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnReview = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.cbbTypeReport = new System.Windows.Forms.ComboBox();
+            this.gbRepot = new System.Windows.Forms.GroupBox();
+            this.dtpEndDay = new System.Windows.Forms.DateTimePicker();
+            this.dtpStartDay = new System.Windows.Forms.DateTimePicker();
+            this.cbbCar = new System.Windows.Forms.ComboBox();
+            this.cbCar = new System.Windows.Forms.CheckBox();
+            this.cbReportRevenue = new System.Windows.Forms.CheckBox();
             this.dgvReportRevenue = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,9 +52,15 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gbUocTinh = new System.Windows.Forms.GroupBox();
+            this.txtTotalAmount = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtTotalBill = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportCar)).BeginInit();
             this.gbRepot.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportRevenue)).BeginInit();
+            this.gbUocTinh.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvReportCar
@@ -63,101 +72,14 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dgvReportCar.Location = new System.Drawing.Point(4, 313);
+            resources.ApplyResources(this.dgvReportCar, "dgvReportCar");
             this.dgvReportCar.Name = "dgvReportCar";
-            this.dgvReportCar.Size = new System.Drawing.Size(1227, 381);
-            this.dgvReportCar.TabIndex = 1;
-            this.dgvReportCar.Visible = false;
-            // 
-            // btnReview
-            // 
-            this.btnReview.Image = global::GUI.Properties.Resources.Actions_file_open_icon;
-            this.btnReview.Location = new System.Drawing.Point(314, 243);
-            this.btnReview.Name = "btnReview";
-            this.btnReview.Size = new System.Drawing.Size(163, 49);
-            this.btnReview.TabIndex = 3;
-            this.btnReview.Text = "Xem báo cáo";
-            this.btnReview.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReview.UseVisualStyleBackColor = true;
-            this.btnReview.Click += new System.EventHandler(this.btnReview_Click);
-            // 
-            // btnExport
-            // 
-            this.btnExport.Image = global::GUI.Properties.Resources.Microsoft_Excel_2013_icon;
-            this.btnExport.Location = new System.Drawing.Point(711, 243);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(163, 49);
-            this.btnExport.TabIndex = 4;
-            this.btnExport.Text = "Xuất báo cáo";
-            this.btnExport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExport.UseVisualStyleBackColor = true;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
-            // cbbTypeReport
-            // 
-            this.cbbTypeReport.Enabled = false;
-            this.cbbTypeReport.FormattingEnabled = true;
-            this.cbbTypeReport.Items.AddRange(new object[] {
-            "Báo cáo theo ngày",
-            "Báo cáo theo tuần",
-            "Báo cáo theo tháng"});
-            this.cbbTypeReport.Location = new System.Drawing.Point(183, 29);
-            this.cbbTypeReport.Name = "cbbTypeReport";
-            this.cbbTypeReport.Size = new System.Drawing.Size(190, 29);
-            this.cbbTypeReport.TabIndex = 1;
-            this.cbbTypeReport.Text = "---Chọn loại báo cáo---";
-            // 
-            // gbRepot
-            // 
-            this.gbRepot.Controls.Add(this.cbbCar);
-            this.gbRepot.Controls.Add(this.cbCar);
-            this.gbRepot.Controls.Add(this.cbReportRevenue);
-            this.gbRepot.Controls.Add(this.cbbTypeReport);
-            this.gbRepot.Location = new System.Drawing.Point(79, 59);
-            this.gbRepot.Name = "gbRepot";
-            this.gbRepot.Size = new System.Drawing.Size(531, 178);
-            this.gbRepot.TabIndex = 5;
-            this.gbRepot.TabStop = false;
-            this.gbRepot.Text = "Báo cáo";
-            // 
-            // cbCar
-            // 
-            this.cbCar.Location = new System.Drawing.Point(7, 75);
-            this.cbCar.Name = "cbCar";
-            this.cbCar.Size = new System.Drawing.Size(170, 29);
-            this.cbCar.TabIndex = 3;
-            this.cbCar.Text = "Báo cáo xe";
-            this.cbCar.UseVisualStyleBackColor = true;
-            this.cbCar.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // cbbCar
-            // 
-            this.cbbCar.Enabled = false;
-            this.cbbCar.FormattingEnabled = true;
-            this.cbbCar.Items.AddRange(new object[] {
-            "Số xe có trong kho",
-            "Số xe đã cho thuê"});
-            this.cbbCar.Location = new System.Drawing.Point(183, 75);
-            this.cbbCar.Name = "cbbCar";
-            this.cbbCar.Size = new System.Drawing.Size(190, 29);
-            this.cbbCar.TabIndex = 4;
-            this.cbbCar.Text = "---Chọn loại báo cáo---";
-            // 
-            // cbReportRevenue
-            // 
-            this.cbReportRevenue.Location = new System.Drawing.Point(7, 29);
-            this.cbReportRevenue.Name = "cbReportRevenue";
-            this.cbReportRevenue.Size = new System.Drawing.Size(170, 29);
-            this.cbReportRevenue.TabIndex = 0;
-            this.cbReportRevenue.Text = "Báo cáo doanh thu";
-            this.cbReportRevenue.UseVisualStyleBackColor = true;
-            this.cbReportRevenue.CheckedChanged += new System.EventHandler(this.cbReportRevenue_CheckedChanged);
             // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column1.DataPropertyName = "Name";
-            this.Column1.HeaderText = "Tên xe";
+            resources.ApplyResources(this.Column1, "Column1");
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
@@ -165,7 +87,7 @@
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column2.DataPropertyName = "NumCar";
-            this.Column2.HeaderText = "Biển số xe";
+            resources.ApplyResources(this.Column2, "Column2");
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
@@ -173,7 +95,7 @@
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column3.DataPropertyName = "Status";
-            this.Column3.HeaderText = "Tình trạng";
+            resources.ApplyResources(this.Column3, "Column3");
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
@@ -181,7 +103,7 @@
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column4.DataPropertyName = "NumberOfCar";
-            this.Column4.HeaderText = "Số lượng còn";
+            resources.ApplyResources(this.Column4, "Column4");
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
@@ -189,8 +111,81 @@
             // 
             this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column5.DataPropertyName = "DateAddCar";
-            this.Column5.HeaderText = "Ngày nhập";
+            resources.ApplyResources(this.Column5, "Column5");
             this.Column5.Name = "Column5";
+            // 
+            // btnReview
+            // 
+            this.btnReview.Image = global::GUI.Properties.Resources.Actions_file_open_icon;
+            resources.ApplyResources(this.btnReview, "btnReview");
+            this.btnReview.Name = "btnReview";
+            this.btnReview.UseVisualStyleBackColor = true;
+            this.btnReview.Click += new System.EventHandler(this.btnReview_Click);
+            // 
+            // btnExport
+            // 
+            resources.ApplyResources(this.btnExport, "btnExport");
+            this.btnExport.Image = global::GUI.Properties.Resources.Microsoft_Excel_2013_icon;
+            this.btnExport.Name = "btnExport";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // cbbTypeReport
+            // 
+            resources.ApplyResources(this.cbbTypeReport, "cbbTypeReport");
+            this.cbbTypeReport.FormattingEnabled = true;
+            this.cbbTypeReport.Items.AddRange(new object[] {
+            resources.GetString("cbbTypeReport.Items"),
+            resources.GetString("cbbTypeReport.Items1"),
+            resources.GetString("cbbTypeReport.Items2"),
+            resources.GetString("cbbTypeReport.Items3")});
+            this.cbbTypeReport.Name = "cbbTypeReport";
+            this.cbbTypeReport.SelectedIndexChanged += new System.EventHandler(this.cbbTypeReport_SelectedIndexChanged);
+            // 
+            // gbRepot
+            // 
+            this.gbRepot.Controls.Add(this.dtpEndDay);
+            this.gbRepot.Controls.Add(this.dtpStartDay);
+            this.gbRepot.Controls.Add(this.cbbCar);
+            this.gbRepot.Controls.Add(this.cbCar);
+            this.gbRepot.Controls.Add(this.cbReportRevenue);
+            this.gbRepot.Controls.Add(this.cbbTypeReport);
+            resources.ApplyResources(this.gbRepot, "gbRepot");
+            this.gbRepot.Name = "gbRepot";
+            this.gbRepot.TabStop = false;
+            // 
+            // dtpEndDay
+            // 
+            resources.ApplyResources(this.dtpEndDay, "dtpEndDay");
+            this.dtpEndDay.Name = "dtpEndDay";
+            // 
+            // dtpStartDay
+            // 
+            resources.ApplyResources(this.dtpStartDay, "dtpStartDay");
+            this.dtpStartDay.Name = "dtpStartDay";
+            // 
+            // cbbCar
+            // 
+            resources.ApplyResources(this.cbbCar, "cbbCar");
+            this.cbbCar.FormattingEnabled = true;
+            this.cbbCar.Items.AddRange(new object[] {
+            resources.GetString("cbbCar.Items"),
+            resources.GetString("cbbCar.Items1")});
+            this.cbbCar.Name = "cbbCar";
+            // 
+            // cbCar
+            // 
+            resources.ApplyResources(this.cbCar, "cbCar");
+            this.cbCar.Name = "cbCar";
+            this.cbCar.UseVisualStyleBackColor = true;
+            this.cbCar.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // cbReportRevenue
+            // 
+            resources.ApplyResources(this.cbReportRevenue, "cbReportRevenue");
+            this.cbReportRevenue.Name = "cbReportRevenue";
+            this.cbReportRevenue.UseVisualStyleBackColor = true;
+            this.cbReportRevenue.CheckedChanged += new System.EventHandler(this.cbReportRevenue_CheckedChanged);
             // 
             // dgvReportRevenue
             // 
@@ -203,17 +198,14 @@
             this.dataGridViewTextBoxColumn4,
             this.Column6,
             this.dataGridViewTextBoxColumn5});
-            this.dgvReportRevenue.Location = new System.Drawing.Point(4, 313);
+            resources.ApplyResources(this.dgvReportRevenue, "dgvReportRevenue");
             this.dgvReportRevenue.Name = "dgvReportRevenue";
-            this.dgvReportRevenue.Size = new System.Drawing.Size(1227, 381);
-            this.dgvReportRevenue.TabIndex = 6;
-            this.dgvReportRevenue.Visible = false;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mã hoá đơn";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
@@ -221,7 +213,7 @@
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn2.DataPropertyName = "EmpName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nhân viên ";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
@@ -229,7 +221,7 @@
             // 
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn3.DataPropertyName = "CreateDay";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Ngày tạo";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
@@ -237,7 +229,7 @@
             // 
             this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column7.DataPropertyName = "CusName";
-            this.Column7.HeaderText = "Tên khách hàng";
+            resources.ApplyResources(this.Column7, "Column7");
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             // 
@@ -245,7 +237,7 @@
             // 
             this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn4.DataPropertyName = "NameCar";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Tên xe";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
@@ -253,7 +245,7 @@
             // 
             this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column6.DataPropertyName = "NumCar";
-            this.Column6.HeaderText = "Biển số xe";
+            resources.ApplyResources(this.Column6, "Column6");
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
@@ -261,25 +253,55 @@
             // 
             this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn5.DataPropertyName = "TotalPrice";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Tổng tiền";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // gbUocTinh
+            // 
+            this.gbUocTinh.Controls.Add(this.txtTotalAmount);
+            this.gbUocTinh.Controls.Add(this.label2);
+            this.gbUocTinh.Controls.Add(this.txtTotalBill);
+            this.gbUocTinh.Controls.Add(this.label1);
+            resources.ApplyResources(this.gbUocTinh, "gbUocTinh");
+            this.gbUocTinh.Name = "gbUocTinh";
+            this.gbUocTinh.TabStop = false;
+            // 
+            // txtTotalAmount
+            // 
+            resources.ApplyResources(this.txtTotalAmount, "txtTotalAmount");
+            this.txtTotalAmount.Name = "txtTotalAmount";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // txtTotalBill
+            // 
+            resources.ApplyResources(this.txtTotalBill, "txtTotalBill");
+            this.txtTotalBill.Name = "txtTotalBill";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // ReportUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.gbUocTinh);
             this.Controls.Add(this.dgvReportRevenue);
             this.Controls.Add(this.gbRepot);
             this.Controls.Add(this.btnReview);
             this.Controls.Add(this.dgvReportCar);
             this.Controls.Add(this.btnExport);
-            this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ReportUC";
-            this.Size = new System.Drawing.Size(1234, 697);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportCar)).EndInit();
             this.gbRepot.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportRevenue)).EndInit();
+            this.gbUocTinh.ResumeLayout(false);
+            this.gbUocTinh.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -307,5 +329,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.GroupBox gbUocTinh;
+        private System.Windows.Forms.TextBox txtTotalBill;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtTotalAmount;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dtpEndDay;
+        private System.Windows.Forms.DateTimePicker dtpStartDay;
     }
 }
