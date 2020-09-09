@@ -93,7 +93,7 @@ namespace GUI.UserControls
                     if (conn.State == ConnectionState.Open)
                         conn.Close();
                     LoadData();
-                    MessageBox.Show($"Thêm thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    MessageBox.Show($"Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
             }
@@ -132,7 +132,7 @@ namespace GUI.UserControls
                     if (conn.State == ConnectionState.Open)
                         conn.Close();
                     LoadData();
-                    MessageBox.Show($"Sửa thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    MessageBox.Show($"Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -154,7 +154,7 @@ namespace GUI.UserControls
                     SqlCommand cmd = new SqlCommand("Delete from Customers Where ID='" + txtMaKH.Text + "'", conn);
                     cmd.ExecuteNonQuery();
                     LoadData();
-                    MessageBox.Show($"Xoá thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    MessageBox.Show($"Xoá thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
             }

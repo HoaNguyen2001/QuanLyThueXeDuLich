@@ -30,18 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnLeft = new System.Windows.Forms.Panel();
+            this.btnquanlyphat = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnquanlyhoadon = new System.Windows.Forms.Button();
+            this.btn_InforCar = new System.Windows.Forms.Button();
+            this.btn_Customers = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnEmployee = new System.Windows.Forms.Button();
             this.pnTitle = new System.Windows.Forms.Panel();
             this.lbTitle = new System.Windows.Forms.Label();
             this.pnLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnMain = new System.Windows.Forms.Panel();
-            this.btnLogOut = new System.Windows.Forms.Button();
-            this.btn_InforCar = new System.Windows.Forms.Button();
-            this.btn_Customers = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnEmployee = new System.Windows.Forms.Button();
-            this.btnquanlyphat = new System.Windows.Forms.Button();
-            this.btnquanlyhoadon = new System.Windows.Forms.Button();
             this.pnLeft.SuspendLayout();
             this.pnTitle.SuspendLayout();
             this.pnLogo.SuspendLayout();
@@ -61,38 +61,14 @@
             this.pnLeft.Controls.Add(this.btnEmployee);
             this.pnLeft.Name = "pnLeft";
             // 
-            // pnTitle
+            // btnquanlyphat
             // 
-            this.pnTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.pnTitle.Controls.Add(this.lbTitle);
-            resources.ApplyResources(this.pnTitle, "pnTitle");
-            this.pnTitle.Name = "pnTitle";
-            // 
-            // lbTitle
-            // 
-            resources.ApplyResources(this.lbTitle, "lbTitle");
-            this.lbTitle.Name = "lbTitle";
-            // 
-            // pnLogo
-            // 
-            this.pnLogo.Controls.Add(this.pictureBox1);
-            resources.ApplyResources(this.pnLogo, "pnLogo");
-            this.pnLogo.Name = "pnLogo";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GUI.Properties.Resources._818372dc919f7b2e5246c443579bcd11;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pnMain
-            // 
-            this.pnMain.BackgroundImage = global::GUI.Properties.Resources.hinh_nen_sieu_xe_full_hd_cho_laptop_3;
-            resources.ApplyResources(this.pnMain, "pnMain");
-            this.pnMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnMain.Name = "pnMain";
+            this.btnquanlyphat.BackColor = System.Drawing.Color.MistyRose;
+            this.btnquanlyphat.Image = global::GUI.Properties.Resources.vw_beetle_icon;
+            resources.ApplyResources(this.btnquanlyphat, "btnquanlyphat");
+            this.btnquanlyphat.Name = "btnquanlyphat";
+            this.btnquanlyphat.UseVisualStyleBackColor = false;
+            this.btnquanlyphat.Click += new System.EventHandler(this.btnquanlyphat_Click);
             // 
             // btnLogOut
             // 
@@ -102,6 +78,15 @@
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // btnquanlyhoadon
+            // 
+            this.btnquanlyhoadon.BackColor = System.Drawing.Color.MistyRose;
+            this.btnquanlyhoadon.Image = global::GUI.Properties.Resources.Distributor_report_icon;
+            resources.ApplyResources(this.btnquanlyhoadon, "btnquanlyhoadon");
+            this.btnquanlyhoadon.Name = "btnquanlyhoadon";
+            this.btnquanlyhoadon.UseVisualStyleBackColor = false;
+            this.btnquanlyhoadon.Click += new System.EventHandler(this.btnquanlyhoadon_Click);
             // 
             // btn_InforCar
             // 
@@ -139,23 +124,38 @@
             this.btnEmployee.UseVisualStyleBackColor = false;
             this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
-            // btnquanlyphat
+            // pnTitle
             // 
-            this.btnquanlyphat.BackColor = System.Drawing.Color.MistyRose;
-            this.btnquanlyphat.Image = global::GUI.Properties.Resources.vw_beetle_icon;
-            resources.ApplyResources(this.btnquanlyphat, "btnquanlyphat");
-            this.btnquanlyphat.Name = "btnquanlyphat";
-            this.btnquanlyphat.UseVisualStyleBackColor = false;
-            this.btnquanlyphat.Click += new System.EventHandler(this.btnquanlyphat_Click);
+            this.pnTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.pnTitle.Controls.Add(this.lbTitle);
+            resources.ApplyResources(this.pnTitle, "pnTitle");
+            this.pnTitle.Name = "pnTitle";
             // 
-            // btnquanlyhoadon
+            // lbTitle
             // 
-            this.btnquanlyhoadon.BackColor = System.Drawing.Color.MistyRose;
-            this.btnquanlyhoadon.Image = global::GUI.Properties.Resources.Distributor_report_icon;
-            resources.ApplyResources(this.btnquanlyhoadon, "btnquanlyhoadon");
-            this.btnquanlyhoadon.Name = "btnquanlyhoadon";
-            this.btnquanlyhoadon.UseVisualStyleBackColor = false;
-            this.btnquanlyhoadon.Click += new System.EventHandler(this.btnquanlyhoadon_Click);
+            resources.ApplyResources(this.lbTitle, "lbTitle");
+            this.lbTitle.Name = "lbTitle";
+            // 
+            // pnLogo
+            // 
+            this.pnLogo.Controls.Add(this.pictureBox1);
+            resources.ApplyResources(this.pnLogo, "pnLogo");
+            this.pnLogo.Name = "pnLogo";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GUI.Properties.Resources._818372dc919f7b2e5246c443579bcd11;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pnMain
+            // 
+            this.pnMain.BackgroundImage = global::GUI.Properties.Resources.hinh_nen_sieu_xe_full_hd_cho_laptop_3;
+            resources.ApplyResources(this.pnMain, "pnMain");
+            this.pnMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnMain.Name = "pnMain";
             // 
             // MainForm
             // 
@@ -165,6 +165,9 @@
             this.Controls.Add(this.pnMain);
             this.Controls.Add(this.pnTitle);
             this.Controls.Add(this.pnLeft);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.pnLeft.ResumeLayout(false);

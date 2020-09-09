@@ -135,6 +135,7 @@ namespace GUI.UserControls
                     cmd.ExecuteNonQuery();
                     LoadData();
                     SetNull();
+                    MessageBox.Show("Xoá thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
             }
@@ -185,7 +186,7 @@ namespace GUI.UserControls
 
                 LoadData();
                 SetNull();
-
+                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {
@@ -219,6 +220,7 @@ namespace GUI.UserControls
 
                     LoadData();
                     SetNull();
+                    MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
             }

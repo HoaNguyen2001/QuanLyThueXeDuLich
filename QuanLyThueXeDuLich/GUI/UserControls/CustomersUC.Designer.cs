@@ -201,6 +201,7 @@
             // 
             // txtMaKH
             // 
+            this.txtMaKH.Enabled = false;
             this.txtMaKH.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMaKH.Location = new System.Drawing.Point(172, 75);
             this.txtMaKH.Margin = new System.Windows.Forms.Padding(5);
